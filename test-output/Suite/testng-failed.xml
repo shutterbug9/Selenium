@@ -6,8 +6,10 @@
       <class name="com.learnautomation.testcases.LoginTestApp">
         <methods>
           <include name="setup"/>
+          <include name="tearDownMethod"/>
           <include name="loginApp"/>
           <include name="teardown"/>
+          <include name="setupSuite"/>
         </methods>
       </class> <!-- com.learnautomation.testcases.LoginTestApp -->
     </classes>

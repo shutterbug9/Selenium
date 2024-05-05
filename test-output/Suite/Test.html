@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 04 18:04:41 EDT 2024</td>
+<td>Started on:</td><td>Sun May 05 10:32:14 EDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12205 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12126 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,23 +76,37 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.learnautomation.testcases.LoginTestApp.teardown()'><b>teardown</b><br>Test class: com.learnautomation.testcases.LoginTestApp</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;driver&quot; is null
-	at com.learnautomation.utility.BrowserFactory.quitBrowser(BrowserFactory.java:41)
-	at com.learnautomation.pages.BaseClass.teardown(BaseClass.java:22)
+<td title='com.learnautomation.testcases.LoginTestApp.tearDownMethod()'><b>tearDownMethod</b><br>Test class: com.learnautomation.testcases.LoginTestApp<br>Parameters: [TestResult name=loginApp status=FAILURE method=LoginTestApp.loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2] output={null}]<br/>
+<a href="#Output-246745017" onClick='toggleBox("Output-246745017", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-246745017" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-246745017">
+Test is about to end<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;driver&quot; is null
+	at com.learnautomation.utility.Helper.captureScreenshot(Helper.java:17)
+	at com.learnautomation.pages.BaseClass.tearDownMethod(BaseClass.java:71)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace819245704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace819245704'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because &quot;driver&quot; is null
-	at com.learnautomation.utility.BrowserFactory.quitBrowser(BrowserFactory.java:41)
-	at com.learnautomation.pages.BaseClass.teardown(BaseClass.java:22)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace246745017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace246745017'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;driver&quot; is null
+	at com.learnautomation.utility.Helper.captureScreenshot(Helper.java:17)
+	at com.learnautomation.pages.BaseClass.tearDownMethod(BaseClass.java:71)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
 	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:222)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:792)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:768)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at org.testng.TestRunner.privateRun(TestRunner.java:829)
 	at org.testng.TestRunner.run(TestRunner.java:602)
@@ -111,7 +125,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>com.learnautomation.testcases.LoginTestApp@38d8f54a</td></tr>
+<td>com.learnautomation.testcases.LoginTestApp@235834f2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.learnautomation.testcases.LoginTestApp.teardown()'><b>teardown</b><br>Test class: com.learnautomation.testcases.LoginTestApp</td>
+<td></td>
+<td>0</td>
+<td>com.learnautomation.testcases.LoginTestApp@235834f2</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
@@ -126,17 +154,17 @@ function toggleAllBoxes() {
 <td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
-	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:29)
-	at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:24)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:31)
+	at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:26)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace803893384", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace803893384'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1270565296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1270565296'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy12.sendKeys(Unknown Source)
-	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:29)
-	at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:24)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:31)
+	at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:26)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -165,7 +193,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>8</td>
-<td>com.learnautomation.testcases.LoginTestApp@38d8f54a</td></tr>
+<td>com.learnautomation.testcases.LoginTestApp@235834f2</td></tr>
 </table><p>
 </body>
 </html>
