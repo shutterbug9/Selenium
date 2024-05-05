@@ -9,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -27,6 +28,8 @@ public class BaseClass {
 	public ExtentReports report;
 	public ExtentTest logger;
 	
+	
+	
 	@BeforeSuite
 	public void setupSuite()
 	{
@@ -41,13 +44,18 @@ public class BaseClass {
 		report.attachReporter(extent);
 		
 		Reporter.log("Settings done - Test can be started",true);
-	}	
+	}
+	
+	@Parameters("browser")
 	@BeforeClass
-	public void setup() {
+	public void setup(String browser, String urlToBeTested) {
 		
 		Reporter.log("Trying to start browser and Getting Application Ready",true);
 		
 		BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
+		
+		//browser is coming from pom.xml file
+		BrowserFactory.startApplication(driver, browser, urlToBeTested);
 		
 		Reporter.log("Browser and Application is up and running",true);
 	}
@@ -72,11 +80,11 @@ public class BaseClass {
 		}
 		else if(result.getStatus() == ITestResult.SUCCESS) {
 			
-			logger.fail("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+			logger.pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
 		}
 		else if(result.getStatus() == ITestResult.SKIP) {
 			
-			logger.fail("Test Skipped", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+			logger.skip("Test Skipped", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
 		}
 		
 		report.flush();

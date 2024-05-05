@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 05 10:32:14 EDT 2024</td>
+<td>Started on:</td><td>Sun May 05 14:35:11 EDT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12126 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12634 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,10 +77,10 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.learnautomation.testcases.LoginTestApp.tearDownMethod()'><b>tearDownMethod</b><br>Test class: com.learnautomation.testcases.LoginTestApp<br>Parameters: [TestResult name=loginApp status=FAILURE method=LoginTestApp.loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2] output={null}]<br/>
-<a href="#Output-246745017" onClick='toggleBox("Output-246745017", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-880908391" onClick='toggleBox("Output-880908391", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-246745017" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-246745017">
+<a href="#Output-880908391" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-880908391">
 Test is about to end<br/>
 </div>
 </td>
@@ -88,8 +88,8 @@ Test is about to end<br/>
 	at com.learnautomation.utility.Helper.captureScreenshot(Helper.java:17)
 	at com.learnautomation.pages.BaseClass.tearDownMethod(BaseClass.java:71)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace246745017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace246745017'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;driver&quot; is null
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace880908391", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace880908391'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)&quot; because &quot;driver&quot; is null
 	at com.learnautomation.utility.Helper.captureScreenshot(Helper.java:17)
 	at com.learnautomation.pages.BaseClass.tearDownMethod(BaseClass.java:71)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -151,19 +151,13 @@ Test is about to end<br/>
 </tr>
 <tr>
 <td title='com.learnautomation.testcases.LoginTestApp.loginApp()'><b>loginApp</b><br>Test class: com.learnautomation.testcases.LoginTestApp</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
-	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:31)
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.driver&quot; is null
+	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:34)
 	at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:26)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1270565296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1270565296'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
-	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:31)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1760763936", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1760763936'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.driver&quot; is null
+	at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:34)
 	at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:26)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)

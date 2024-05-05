@@ -1,5 +1,6 @@
 package com.learnautomation.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,14 +13,14 @@ public class LoginPage {
 		
 		this.driver = ldriver;
 		//super(ldriver);
-		PageFactory.initElements(ldriver, this);
+		//PageFactory.initElements(ldriver, this);
 	}
 	
-	@FindBy(name="username")WebElement uname;
+	//@FindBy(name="username")WebElement uname;
 	
-	@FindBy(name="password")WebElement pass;
+	//@FindBy(name="password")WebElement pass;
 	
-	@FindBy(id="submit")WebElement submitButton;
+	//@FindBy(id="submit")WebElement submitButton;
 	
 	public void loginToApp(String usernameApp, String passwordApp) {
 		
@@ -29,11 +30,14 @@ public class LoginPage {
 			// TODO Auto-generated catch block
 		}
 		
-		uname.sendKeys(usernameApp);
+		//uname.sendKeys(usernameApp);
+		driver.findElement(By.name("username")).sendKeys(usernameApp);
 		
-		pass.sendKeys(passwordApp);
+		//pass.sendKeys(passwordApp);
+		driver.findElement(By.name("password")).sendKeys(passwordApp);
 		
-		submitButton.click();
+		//submitButton.click();
+		driver.findElement(By.xpath("//*[@id=\"submit\"]")).click();
 		
 		
 	}

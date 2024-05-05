@@ -17,12 +17,12 @@
       <![CDATA[Test is about to end]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-05-05T10:32:14 EDT" name="Suite" finished-at="2024-05-05T10:32:26 EDT" duration-ms="12126">
+  <suite started-at="2024-05-05T15:09:51 EDT" name="Default suite" finished-at="2024-05-05T15:09:55 EDT" duration-ms="4006">
     <groups>
     </groups>
-    <test started-at="2024-05-05T10:32:14 EDT" name="Test" finished-at="2024-05-05T10:32:26 EDT" duration-ms="12126">
+    <test started-at="2024-05-05T15:09:51 EDT" name="Default test" finished-at="2024-05-05T15:09:55 EDT" duration-ms="4006">
       <class name="com.learnautomation.testcases.LoginTestApp">
-        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2]" started-at="2024-05-05T10:32:14 EDT" name="setupSuite" finished-at="2024-05-05T10:32:14 EDT" duration-ms="723" status="PASS">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@5656be13]" started-at="2024-05-05T15:09:50 EDT" name="setupSuite" finished-at="2024-05-05T15:09:51 EDT" duration-ms="667" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Setting up reports and Test started]]>
@@ -32,7 +32,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2]" started-at="2024-05-05T10:32:14 EDT" name="setup" finished-at="2024-05-05T10:32:18 EDT" duration-ms="4044" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@5656be13]" started-at="2024-05-05T15:09:51 EDT" name="setup" finished-at="2024-05-05T15:09:54 EDT" duration-ms="3941" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Trying to start browser and Getting Application Ready]]>
@@ -42,18 +42,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2]" started-at="2024-05-05T10:32:18 EDT" name="loginApp" finished-at="2024-05-05T10:32:26 EDT" duration-ms="8047" status="FAIL">
+        <test-method signature="loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@5656be13]" started-at="2024-05-05T15:09:54 EDT" name="loginApp" finished-at="2024-05-05T15:09:55 EDT" duration-ms="25" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
-at com.learnautomation.pages.LoginPage.loginToApp(LoginPage.java:31)
-at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:26)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+at com.learnautomation.testcases.LoginTestApp.loginApp(LoginTestApp.java:29)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -86,11 +82,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2]" started-at="2024-05-05T10:32:26 EDT" name="tearDownMethod" finished-at="2024-05-05T10:32:26 EDT" duration-ms="3" status="FAIL">
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.learnautomation.testcases.LoginTestApp@5656be13]" started-at="2024-05-05T15:09:55 EDT" name="tearDownMethod" finished-at="2024-05-05T15:09:55 EDT" duration-ms="5" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginApp status=FAILURE method=LoginTestApp.loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2] output={null}]]]>
+                <![CDATA[[TestResult name=loginApp status=FAILURE method=LoginTestApp.loginApp()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@5656be13] output={null}]]]>
               </value>
             </param>
           </params>
@@ -100,8 +96,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because "driver" is null
-at com.learnautomation.utility.Helper.captureScreenshot(Helper.java:17)
-at com.learnautomation.pages.BaseClass.tearDownMethod(BaseClass.java:71)
+at com.learnautomation.utility.Helper.captureScreenshot(Helper.java:19)
+at com.learnautomation.pages.BaseClass.tearDownMethod(BaseClass.java:73)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -142,11 +138,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </line>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@235834f2]" started-at="2024-05-05T10:32:26 EDT" name="teardown" finished-at="2024-05-05T10:32:26 EDT" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.learnautomation.testcases.LoginTestApp@5656be13]" started-at="2024-05-05T15:09:55 EDT" name="teardown" finished-at="2024-05-05T15:09:55 EDT" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.learnautomation.testcases.LoginTestApp -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -1,5 +1,6 @@
 package com.learnautomation.testcases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -18,12 +19,18 @@ public class LoginTestApp extends BaseClass {
 		
 		//System.out.println(driver.getTitle());
 		
-		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		//LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 		
 		//Adding log type such as info,pass, fail to the extent report
 		logger.info("Starting Application");
 		
-		loginPage.loginToApp(excel.getStringData("Login", 0, 0), excel.getStringData("Login", 0, 1));
+		//loginPage.loginToApp(excel.getStringData("Login", 0, 0), excel.getStringData("Login", 0, 1));
+		
+		driver.findElement(By.name("username")).sendKeys("student");
+		
+		driver.findElement(By.name("password")).sendKeys("Password123");
+		
+		driver.findElement(By.xpath("//*[@id=\"submit\"]")).click();
 		
 		logger.pass("Login Success");
 		
