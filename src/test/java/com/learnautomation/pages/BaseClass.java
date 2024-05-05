@@ -55,7 +55,7 @@ public class BaseClass {
 		BrowserFactory.startApplication(driver, config.getBrowser(), config.getStagingURL());
 		
 		//browser is coming from pom.xml file
-		BrowserFactory.startApplication(driver, browser, urlToBeTested);
+		//BrowserFactory.startApplication(driver, browser, urlToBeTested);
 		
 		Reporter.log("Browser and Application is up and running",true);
 	}

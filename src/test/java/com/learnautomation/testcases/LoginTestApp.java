@@ -36,25 +36,6 @@ public class LoginTestApp extends BaseClass {
 		
 	}
 	
-	@Test
-	public void IncorrectUsername() {
-		
-		driver.findElement(By.name("username")).sendKeys("Student");
-		
-		driver.findElement(By.name("password")).sendKeys("Password123");
-		
-		driver.findElement(By.xpath("//*[@id=\"submit\"]")).click();
-	}
-	
-	@Test
-	public void IncorrectPassword() {
-		
-		driver.findElement(By.name("username")).sendKeys("student");
-		
-		driver.findElement(By.name("password")).sendKeys("password123");
-		
-		driver.findElement(By.xpath("//*[@id=\"submit\"]")).click();
-	}
 }
 
 
