@@ -46,7 +46,7 @@ public class BaseClass {
 		Reporter.log("Settings done - Test can be started",true);
 	}
 	
-	@Parameters("browser")
+	@Parameters({"browser","urlToBeTested"})
 	@BeforeClass
 	public void setup(String browser, String urlToBeTested) {
 		
